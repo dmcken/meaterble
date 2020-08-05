@@ -13,12 +13,12 @@ import binascii
 
 from meater import MeaterProbe
  
-print "Connecting..."
+print("Connecting...")
 devs = [MeaterProbe(addr) for addr in sys.argv[1:]]
-print "Connected"
+print("Connected")
 
 while True:
     for dev in devs:
        dev.update()
-       print dev
+       print(dev)
     time.sleep(1)
